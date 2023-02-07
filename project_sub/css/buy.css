@@ -1,0 +1,105 @@
+body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/262/610/554/cpu-motherboard-geek-electrical-network-wallpaper-preview.jpg);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .Cont {
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+  
+  }
+  
+  .ContMid {
+    flex: 50%;
+  }
+  
+  .ContBig {
+    flex: 75%;
+  }
+  
+  .ContMid,
+  .ContBig {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .btn {
+    background-color: #11882f;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #1b421d;
+  }
+  
+.nav li{
+  float: left;
+  list-style-type: none;
+  
+}
+.nav li a{
+  text-decoration: none;
+  padding-left: 5px;
+  margin-right: 4px;
+}
+
+body{
+  margin: 0;
+  width:99%;
+  height: 700px;
+  background-image: url('/images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+
+.head{
+  width:100%;
+  height: 20px;
+  padding: 4px;
+}
+.head{
+  background-color: aqua;
+  width:100%;
+  border-radius: 5px;
+}
+.com {
+  float: left;
+}
+.rem{
+  float: right;
+
+}
