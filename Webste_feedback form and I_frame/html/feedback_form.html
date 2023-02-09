@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/feedback.css">
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    
+    <div class="form-container">
+      <form action="#">
+        <h1>Feedback Form</h1>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <br>
+        Date Of Birth:<input type="date" placeholder="Your DOB" required>
+
+        <textarea placeholder="Your Message" required></textarea>
+        <p>Would you recommend this site to others?</p>
+        <input type="radio" id="yes" name="recommend" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="recommend" value="no">
+        <label for="no">No</label>
+        <p>What is your rating of this site?</p>
+        <select required>
+          <option value="">-- Select One --</option>
+          <option value="1">1 (Poor)</option>
+          <option value="2">2(Average)</option>
+          <option value="3">3(Good)</option>
+          <option value="4">4(Very Good)</option>
+          <option value="5">5 (Excellent)</option>
+        </select>
+        <p> What Color Would u Suggest Us to Change The Website Into:</p>
+        <input type="color" value="#5678">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to Newsletter</label>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

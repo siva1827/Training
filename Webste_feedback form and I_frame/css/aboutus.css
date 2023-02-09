@@ -1,0 +1,85 @@
+.body{
+    background-color: blueviolet;
+}
+.head{
+    width:500;
+    height: 20px;
+    padding: 4px;
+}
+.head{
+    background-color: rgb(39, 150, 169);
+    width:100%;
+
+}
+.com {
+    float: left;
+}
+.rem{
+    float: right;
+}
+.nav li{
+    float: left;
+    list-style-type: none;
+    
+}
+.nav li a{
+    text-decoration: none;
+    padding-left: 5px;
+}
+body{
+    background-color:rgb(5, 5, 69);
+}
+.about{
+    color: rgb(123, 119, 119);
+}
+.about p{
+    text-shadow: 10px;
+    font-size: larger;
+}
+
+footer {
+    background-color:azure;
+    color: #020202;
+    width: 100%;
+    margin-top: 256px;
+    
+}
+.para1{
+    width: 50%;
+    height:300px;
+    float: left;
+    background-color: rgb(214, 214, 214);
+}
+.paragraph1{
+    width: 100%;
+    height: 300px;
+}
+
+.image1 img{
+    float: left;
+    width:40%;
+    margin-left:39px;
+}
+.image2 img{
+    float: left;
+    width:50%;
+    margin-left:9px;
+}
+
+.paragraph2 .para {}
+    background-color: aqua;
+   
+    margin-left: 20%;
+}
+.paragraph2{
+        display: flex;
+}
+
+.paragraph2 img{
+    margin: 20px;
+}
+.paragraph2 p{
+    margin-left: 20px;
+}
+
+

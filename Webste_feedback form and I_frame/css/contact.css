@@ -1,0 +1,132 @@
+.loginForm {
+    background: #fff;
+    width: 500px;
+    margin: 200px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+      flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  }
+  .loginForm h1 {
+    padding: 35px 35px 0 35px;
+    font-weight: 300;
+  }
+  .content {
+    padding: 35px;
+ 
+    text-align: center;
+  }
+.inputField {
+    padding: 12px 5px;
+  }
+  .inputField input {
+    font-size: 16px;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    padding: 10px 1px;
+    padding-top: 38px;
+    border: 0;
+    border-bottom: 1px solid #747474;
+  }
+  .inputField input:focus {
+    border-color: #222;
+  }
+
+.inputField select {
+    font-size: 16px;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    border-bottom: 1px solid #747474;
+  }
+  .inputField select:focus {
+    border-color: #222;
+  }
+.action {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    text-decoration: none;
+  }
+  .action button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+  }
+   .action button:hover {
+    background: #d8d8d8;
+  }
+  .action button:nth-child(2) {
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+  }
+  .action button:nth-child(2):hover {
+    background: #485e85;
+  }
+  
+  .action button:nth-child(2) a{
+    text-decoration: none;
+  }
+  
+  .action button:nth-child(1):hover{
+    background: rgb(207, 155, 155);
+  }
+  
+  .action button:nth-child(1) a{
+    text-decoration: none;
+  }
+  
+.nav li{
+    float: left;
+    list-style-type: none;
+    
+}
+.nav li a{
+    text-decoration: none;
+    padding-left: 5px;
+    margin-right: 4px;
+}
+.head{
+    width:100%;
+    height: 20px;
+    padding: 4px;
+}
+.head{
+    background-color: aqua;
+    width:100%;
+    border-radius: 5px;
+}
+.com {
+    float: left;
+}
+.rem{
+    float: right;
+
+}
+
+.main_div{
+    color: rgb(156, 164, 171);
+    width:100%;
+}
+body{
+margin: 0;
+width:99%;
+height: 700px;
+background-image: url('/images/contact1.jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
