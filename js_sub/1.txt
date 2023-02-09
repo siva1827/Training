@@ -1,0 +1,6 @@
+var str="Hello Folks";
+var a=str.split(" ");
+ for(var i=0;i<a.length;i++){
+     a[i]=a[i].split("").reverse().join("");
+ }
+console.log(a.join(" "));

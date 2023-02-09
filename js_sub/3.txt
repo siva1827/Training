@@ -1,0 +1,5 @@
+var inc=8
+for(let a=0;a<3;a++){
+    array.unshift(inc++);
+}
+console.log(array);

@@ -1,0 +1,9 @@
+var arr=[1,2,3,4,5];
+ l=arr.length
+var j=0;
+while( j<l){
+    arr.pop();
+    j++;
+}
+
+console.log(arr);

@@ -1,0 +1,14 @@
+var s1="Mary";
+var s2="Army"
+s1=s1.toLowerCase();
+s2=s2.toLowerCase();
+let str1 = [...s1]; // strArr = ["1", "2", "3", "4", "5"]
+let str2= [...s2];
+console.log(str2.sort());
+console.log(str1.sort().join("")==str2.sort().join(""));
+var array=[1,2,3,4,5,6,7];
+let len=array.length;
+for(let a=0;a<3;a++){
+    array.pop()
+}
+console.log(array);
