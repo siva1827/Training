@@ -1,0 +1,226 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Julee&family=Orbitron&family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@1,900&family=Share+Tech+Mono&display=swap');
+
+ *,pre{
+    font-family: 'Orbitron', sans-serif;
+    
+}
+
+body{
+    margin-left:4%;
+    background-color: black;
+    margin-top:1%;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav_bar{
+    display:flex;
+    font-size: 10px;
+}
+.nav_bar h1{
+    color:#FF5B00;
+    font-size: 22px;
+    padding-right:4%;
+    padding-top: 10px;
+    display: flex;
+    
+}
+.nav_bar h2{
+    color:rgb(174, 172, 172);
+    padding-top: 15px;
+    padding-left:80px;
+    font-size: 18px;
+}
+.nav_bar button{
+    background-color: #FF5B00;
+    font-size: 14px;
+    height: 40px;
+    width: 160px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 400px;  
+}
+.nav_bar .book{
+    font-size: 10px;
+    margin-left: 30px;
+    border-radius: 40px;   
+}
+
+.container1{
+    height: 100vh;
+    width:100%;
+    background-image:url('/images/blackback.png');
+    background-repeat: no-repeat;
+    background-size: 100%;  
+    background-position: 250px;
+    animation-name: anime;
+    animation-duration: 2s;
+}
+
+@keyframes anime {
+    from{ background-position:1000px ;}
+    to{background-position: 250px;}
+}
+.words{
+    height:40px;
+    width:30%;
+    display:block;
+}
+.words pre{
+    color:#f5f5f5;
+    font-weight: 1000px;
+    font-size: 25px;
+    font-weight: bolder;   
+    animation-name: container1;
+    animation-duration: 5s;
+}
+
+@keyframes container1 {
+    from{color:black}
+    to{color:#f5f5f5;} 
+   
+}
+
+.words a{
+    text-decoration: none;
+    font-size: large;
+    color: #f5f5f5;
+    animation-name: mymove1;
+    animation-duration: 3s;
+}
+.container1 .words .prehead a{
+    animation-name: mymove1;
+    animation-duration: 3s;
+
+}
+@keyframes  mymove1{
+    50% {transform: rotate(360deg);}
+  }
+.words h3{
+    color:#f5f5f5;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 60%;
+    margin-left: 10px;
+}
+.words .header{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.words .prehead{
+    margin-right: 100%;
+}
+.container2{
+    width:100%;
+    height:100vh;
+    display: flex;
+    margin-top: 3%;
+}
+.container2 .para{
+    color: #f5f5f5;
+    width:40%;
+    height:100vh;
+    margin-top: 8%;
+
+}
+.container2 .para p{
+    text-align: justify;
+    font-size: larger;
+    font-weight: lighter;
+    margin-right: 5%;
+}
+.container2 .image{
+    margin-left: 10%;
+    width:55%;
+    height:100vh;
+}
+.container2 .para .logo{
+   display: flex;
+    margin-top:8%;
+}
+.container2 .para .logo .time{
+    height:150px;
+    width:250px;
+    font-size: large;
+}
+.container2 .para .logo .fuel{
+    height:150px;
+    width:250px;
+    font-size: large;
+    margin-left: 5%;
+}
+.container3{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+
+.container3 .image{
+    width:60%;
+    height:100vh;
+
+}
+.container3 .para{
+    width:30%;
+    height:100vh;
+    color: #f5f5f5;
+    margin-left: 5%;
+    font-weight:normal;
+    margin-top:7%;
+    text-align: justify;
+}
+
+.container3 .horsepower{
+    display: flex;
+    
+}
+.container3 .horsepower .one{
+    width:100%;
+    height:100px;
+    border-bottom: #FF5B00;
+    text-align: justify;
+    
+}
+.container3 .horsepower .two{
+    width:100%;
+    height:100px;
+    border-bottom: #FF5B00;
+    margin-left: 5%;
+    text-align: justify;
+}
+    
+.container3 .para .horsepower .one .fill1{
+   background-color: #FF5B00;
+   width: 25%;
+   height:10px;    
+}
+
+.container3 .para .horsepower .two .fill2{   
+    width:25%;
+    height:10px;
+    background-color: #FF5B00;     
+}
+footer .nav_bar .last p{ 
+    text-align: justify;
+    color: #f5f5f5;
+    margin-left: 1%;
+}
+.nav_bar .last{
+    color: #f5f5f5;
+    font-size: 14px;
+    height: 40px;
+    width: 160px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 400px;
+}
+.container3  .backtop{
+    margin-top: 35%;
+    margin-left: 50%;
+}
+.container3 .backtop a{
+    text-decoration: none;
+    color:#f5f5f5;
+}
+
