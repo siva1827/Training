@@ -1,0 +1,51 @@
+function concat(...args) {
+    return args.flat();
+  }
+///// Concat function
+let n = prompt("Enter the number of arrays: ");
+let arrays = [];
+for (let i = 0; i < n; i++) {
+  arrays.push(prompt(`Enter array ${i + 1}:`).split(" ").map(Number));
+}
+console.log(concat(...arrays));
+
+
+///even or Odd
+let s=1234;
+let i,sum=0,temp=0;
+while(s!=0){
+    temp=s%10;
+    sum+=temp;
+    s=Math.floor(s/10);
+}
+if(sum%2!=0)
+console.log("Oddish");
+else
+console.log("Evenish");
+
+///Binary Search
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let x = 9;
+
+
+function binarySearch(arr, x, start, end) {
+  if (start > end) {
+      return false;
+  }
+  
+  let mid = Math.floor((start + end) / 2);
+  
+  if (arr[mid] === x){
+      return true;
+  } 
+  
+  if (arr[mid] > x) {
+      return binarySearch(arr, x, start, mid - 1);
+  }
+  
+  return binarySearch(arr, x, mid + 1, end);
+}
+
+
+
+console.log(binarySearch(arr, x, 0, arr.length - 1));
