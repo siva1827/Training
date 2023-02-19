@@ -1,0 +1,47 @@
+//Exercise1
+
+// Create an Empty Set
+var example=new Set();
+// Create a set containing 0 to 10 using loop
+var example2=new Set();
+for(let i=1;i<=10;i++){
+    example2.add(i)+" ";
+    console.log (i);
+    
+}
+
+// Remove an element from set
+const countries =new Set (['Finland', 'Sweden', 'Norway'])
+console.log(countries)
+countries.delete('Sweden');
+console.log(countries)
+//Clear a set
+countries.clear();
+console.log(countries)
+
+
+//Create a set of 5 string elements from array
+let array=['Finland', 'Sweden', 'Norway','korea','morraco']
+let setexample=new Set(array);
+console.log(setexample)
+
+//Create a map of countries and number of characters of a country
+
+let mapexample=new Map([['India',5],['Finland',7],['Sweden',6],['Norway',5]])
+console.log(mapexample)
+
+//Exrercise 2
+const a = [4, 5, 8, 9]
+const b = [3, 4, 5, 7]
+
+// Find a union b
+let union=[...a,...b]
+console.log(union)
+
+//Find a intersection b
+let intersection=a.filter((x)=>b.includes(x))
+console.log(intersection)
+
+//Find a with b
+let difference=a.filter((x)=>!b.includes(x))
+console.log(difference)

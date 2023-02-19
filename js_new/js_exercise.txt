@@ -1,0 +1,57 @@
+// for each
+
+var names=['siva','naresh','raja']
+names.forEach(function(elements){
+ console.log(elements)   
+}) 
+
+//map
+
+const numbers = [1, 2, 3, 4, 5];
+
+const squaredNumbers = numbers.map(number => number ** 2);
+
+console.log(squaredNumbers); 
+
+
+// start with
+
+const country = ['Egypt','England','Newyork'];
+const startsWith =country.filter((country)=> country.startsWith("E"));
+console.log(startsWith) 
+
+//typeof
+
+function getStringLists(arr) {
+  const stringArray = arr.filter(item => typeof item === 'string');
+  return stringArray;
+}
+
+const mixedArray = [1, 'hello', true, 3, 'world'];
+const stringArray = getStringLists(mixedArray);
+console.log(stringArray);
+
+//reduce
+
+const countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland'];
+const sentence = countries.reduce((acc, curr, index) => {
+  if (index === countries.length - 1) {
+    return `${acc}, and ${curr} are north European countries.`;
+  } else {
+    return `${acc}, ${curr}`;
+  }
+});
+
+console.log(sentence); 
+
+// destruction
+
+const constants = [2.71828, 3.14159, 9.81, 37, 100];
+
+const [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants;
+
+console.log(e); // 2.71828
+console.log(pi); // 3.14159
+console.log(gravity); // 9.81
+console.log(humanBodyTemp); // 37
+console.log(waterBoilingTemp); // 100
