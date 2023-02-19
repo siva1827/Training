@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+     src="https://images.unsplash.com/photo-1496989981497-27d69cdad83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2lyY2xlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" 
+     alt="Smiley" width="100px" height="100px">
+
+
+    <script>
+function bigImg(x) {
+  x.style.height = "400px";
+  x.style.width = "400px";
+}
+
+function normalImg(x) {
+  x.style.height = "200px";
+  x.style.width = "200px";
+}
+</script>
+    
+</body>
+</html>
