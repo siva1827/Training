@@ -1,0 +1,27 @@
+//for each
+const numbers_each = [1, 2, 3];
+numbers_each.forEach(num => console.log(num * 2));
+// Output: 2, 4, 6
+
+
+//map
+const numbers_map = [1, 2, 3];
+const doubledNumbers = numbers_map.map(num => num * 2);
+console.log(doubledNumbers);
+// Output: [2, 4, 6]
+
+
+//filter
+const numbers_filter = [1, 2, 3];
+const evenNumbers = numbers_filter.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+// Output: [2]
+
+
+//reduce
+const numbers = [15.5, 2.3, 1.1, 4.7];
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+console.log(numbers.reduce(getSum,0));
+// Output: 6

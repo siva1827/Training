@@ -1,0 +1,141 @@
+function mostSpokenLanguages(countries, n) {
+   
+    const languageCount = {};
+  
+    
+    for (const country of countries) {
+      
+      for (const language of country.languages) {
+        if (languageCount[language]) {
+          languageCount[language]++;
+        } else {
+          languageCount[language] = 1;
+        }
+      }
+    }
+  
+    
+    const languageArray = Object.entries(languageCount);
+  
+    
+    languageArray.sort((a, b) => b[1] - a[1]);
+  
+    
+    const topLanguages = languageArray.slice(0, n);
+  
+    
+    return topLanguages.map(([language, count]) => ({ [language]: count }));
+  }
+  
+  console.log(mostSpokenLanguages(countries, 10));
+  console.log(mostSpokenLanguages(countries, 3));
+//   //output:[
+// {'English':91},
+// {'French':45},
+// {'Arabic':25},
+// {'Spanish':24},
+// {'Russian':9},
+// {'Portuguese':9},
+// {'Dutch':8},
+// {'German':7},
+// {'Chinese':5},
+// {'Swahili':4},
+// {'Serbian':4}
+// ]
+  
+
+const personAccount = {
+    firstName: 'John',
+    lastName: 'Doe',
+    incomes: new Map(),
+    expenses: new Map(),
+  
+
+    get totalIncome() {
+      let total = 0;
+      for (const amount of this.incomes.values()) {
+        total += amount;
+      }
+      return total;
+    },
+
+    get totalExpense() {
+      let total = 0;
+      for (const amount of this.expenses.values()) {
+        total += amount;
+      }
+      return total;
+    },
+
+    accountInfo() {
+      return `Account Information:\nName: ${this.firstName} ${this.lastName}\nTotal Income: ${this.totalIncome}\nTotal Expense: ${this.totalExpense}`;
+    },
+  
+ 
+    addIncome(description, amount) {
+      this.incomes.set(description, amount);
+    },
+  
+
+    addExpense(description, amount) {
+      this.expenses.set(description, amount);
+    },
+
+    accountBalance() {
+      return this.totalIncome - this.totalExpense;
+    }
+
+    
+  };
+  console.log(myAccount.accountInfo());
+// Output: Account Information:
+//         Name: Alice Smith
+//         Total Income: 6000
+//         Total Expense: 2000
+
+console.log(myAccount.accountBalance());
+// Output: 4000
+
+
+const skills = ['HTML', 'CSS', 'JS', 'React','Node', 'Python']
+const skillsJSON = JSON.stringify(skills);
+console.log(skillsJSON); 
+//output ["HTML","CSS","JS","React","Node","Python"]
+
+const age = 250;
+const ageJSON = JSON.stringify(age);
+console.log(ageJSON);  
+// "250"
+
+const isMarried = true;
+const strIsMarried = JSON.stringify(isMarried);
+console.log(strIsMarried); 
+// "true"
+
+const student = {
+    firstName:'Aaaa',
+    lastName:'Ye',
+    age:250,
+    isMarried:true,
+    skills:['HTML', 'CSS', 'JS', 'React','Node', 'Python', ]
+  }
+  
+  const studentStringified = JSON.stringify(student);
+  console.log(studentStringified);
+
+  
+// //output
+// {"firstName":"Aaaa","lastName":"Ye","age":250,"isMarried":true,"skills":["HTML","CSS","JS","React","Node","Python"]}
+
+
+const studentSubset = {
+    firstName: student.firstName,
+    lastName: student.lastName,
+    skills: student.skills
+  };
+  
+  const studentString = JSON.stringify(studentSubset);
+  
+  console.log(studentString);
+
+  //output{"firstName":"Aaaa","lastName":"Ye","skills":["HTML","CSS","JS","React","Node","Python"]}
