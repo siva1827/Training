@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="../css/appointment.css">
+  </head>
+  <body>
+   
+    <h1>Book an appointment for Service Of Your Vehicle</h1>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required pattern="[a-zA-Z ]{2,30}">
+      <span class="validation-message">Please enter a valid name (2-30 letters only, no numbers or special characters).</span>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="validation-message">Please enter a valid email address.</span>
+      
+        <label for="age">Age:</label>
+        <input class="ael" type="number" id="age" name="age" required>
+  
+        <label for="phone">Phone Number:</label>
+        <input class="ael" type="tel" id="phone" name="phone" required>
+        <span class="error" id="phoneerr"></span>
+  
+        <label for="adhar">Aadhar Number:</label>
+        <input class="ael" type="tel" id="adhar" name="adhar" required>
+        
+  
+        <label for="address">Address:</label>
+        <textarea class="ael" id="address" name="address" required></textarea>
+       
+  
+        <label for="location">Location:</label>
+        <select class="ael" id="location" name="location" required>
+          <option value=""></option>
+          <option value="tamilnadu">tamilnadu</option>
+          <option value="kerala">kerala</option>
+          <option value="andhra">andhra</option>
+          <option value="mumbai">mumbai</option>
+          <option value="delhi">delhi</option>
+          <option value="kolkata">kolkata</option>
+          <option value="bihar">bihar</option>
+          <option value="karnataka">karnataka</option>
+          <option value="maharaksra">maharaksra</option>
+          <option value="rajastan">rajastan</option>
+          <option value="gujarat">gujarat</option>
+          <option value="pondichery">pondichery</option>
+        </select>
+
+        <label for="duration">Duration :</label>
+        <select class="ael" name="duration" id="duration" required>
+          <option value=""></option>
+          <option value="1 day">1 day</option>
+          <option value="2 day">2 day</option>
+          <option value="3 day">3 day</option>
+          <option value="4 day">4 day</option>
+          <option value="5 day">5 day</option>
+          <option value="6 day">6 day</option>
+          <option value="7 day">7 day</option>
+          <option value="8 day">8 day</option>
+          <option value="9 day">9 day</option>
+          <option value="10 day">10 day</option>
+          <option value="11 day">11 day</option>
+          <option value="12 day">12 day</option>
+          <option value="13 day">13 day</option>
+          <option value="14 day">14 day</option>
+        </select>
+  <p id="price"></p> 
+  <p id="offer"></p>
+  <!-- <button onclick="discount()">Check for discount</button> -->
+        <label for="retur">Returning Date:</label>
+        <input class="ael" type="date" id="return" name="return" required>
+        <span class="error" id="returnerr"></span>
+      <input type="submit" value="Book" onclick="validateForm()">
+    </form>
+    <script>
+        
+        var dur = document.getElementById("duration");
+    var op=document.getElementById('price');
+    let temp;     
+       var sum=0;
+        
+    dur.oninput = ()=>{
+        temp = dur.value.split(" ");
+        var iduration=parseInt(temp[0]);
+        // for(var j=0;j<iduration;j++){
+        //     sum+=800;
+        // }
+        // op.textContent = iduration*800;
+        op.innerHTML="<p>"+"The actual price is : "+iduration*800+"<p>"
+    }
+        function validateForm(){
+
+            var form = document.getElementById("form");
+            var input = form.getElementsByClassName("ael");
+
+            form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            });
+
+            for (var i = 0; i < input.length; i++) {
+              input[i].addEventListener("keypress", function(e) {
+                if (e.keyCode === 13) {
+                  e.preventDefault();
+                }
+              });
+            }
+
+            var name=document.getElementById('name').value;
+            var age=document.getElementById('age').value;
+            var email=document.getElementById('email').value;
+            var phone=document.getElementById('phone').value;
+            var adhar=document.getElementById('adhar').value;
+            var address=document.getElementById('address').value;
+            var location=document.getElementById('location').value;
+            var duration=document.getElementById('duration').value;
+            var ret=document.getElementById('return').value;
+           // console.log(name,age,email,phone,adhar,address,location,duration,ret);
+           var flag=1;
+           var p= /^[A-Z][a-zA-Z]*$/;
+           var ep=/^[A-Za-z0-9._]+@gmail\.com|hotmail\.com$/;
+           if(!p.test(name)){
+            console.log("user name is false");
+            flag=0;
+           }
+           if(age<=18){
+            console.log("age not valid for booking");
+            flag=0;
+           }
+           if(!ep.test(email)){
+            console.log("email is not valid")
+            flag=0;
+           }
+           if(phone.length!=10){
+            console.log("phone is not valid")
+            flag=0;
+           }
+           if(adhar.length!=12){
+            console.log("adhar number should be 12 digit")
+            flag=0;
+           }
+
+         var dateObj = new Date(ret);
+        
+         var currentDate = new Date();
+         //alert(dateObj+"------")
+         if (dateObj.getTime() < currentDate.getTime() || dateObj=='Invalid Date') {
+           console.log("The input date is less than today's date.");
+           alert("return date is invalid")
+           flag=0;
+         }
+         if(flag==1){
+        //     alert(email);
+        let emailarr = JSON.parse(localStorage.getItem('emailarr')) || [];
+        for(let k=0;k<emailarr.length;k++){
+            if(emailarr[k]==email){
+                alert("You are existing user discount available for only 1st user")
+                // checkdis=0;
+                localStorage.setItem("checkdis",0);
+                break;
+            }
+        }
+        if(localStorage.getItem("checkdis")!=0){
+         emailarr.push(email);
+     localStorage.setItem('emailarr', JSON.stringify(emailarr));
+                 var offer=duration.split(" ");
+                offer=parseInt(offer[0]);
+                var dis=(offer*800)-offer*800*0.1;
+                alert("Congradulation you have 10% discount offer");
+                document.querySelector("#offer").innerHTML= `You got new user discount offer of 10% your final price is ${dis}...Happy riding`;
+        }
+            localStorage.setItem("checkdis",1);
+            alert("You booked successfully")
+         }  
+        \
+  // previous code
+  // ...
+  var ret = document.getElementById('return').value;
+  
+  // Check if returning date is valid
+  var today = new Date();
+  var dep = new Date(today.getTime() + parseInt(temp[0]) * 24 * 60 * 60 * 1000);
+  var retDate = new Date(ret);
+  if (retDate < today || retDate < dep) {
+    document.getElementById('returnerr').textContent = 'Returning date must be after the current date and departure date';
+    flag = 0;
+  } else {
+    document.getElementById('returnerr').textContent = '';
+  }
+  
+  // Submit form if all fields are valid
+  if (flag) {
+    form.submit();
+  }
+}
+         //var check= prompt("check for discount")
+    
+    //      function discount(){
+    //         var checkdis=true;
+    //         alert("clicked")
+    //       var emailarr = JSON.parse(localStorage.getItem('emailarr')) || [];
+    //       console.log(emailarr)
+    //       for(let k=0;k<emailarr.length;k++){
+    //         if(emailarr[k]==email){
+    //             alert("You are existing user discount available for only 1st user")
+    //             checkdis=false;
+    //             break;
+    //         }
+    //     }
+    //     if(checkdis==true){
+    //         var offer=duration.split(" ");
+    //             offer=parseInt(offer[0]);
+    //             dis=0.1*offer;
+    //             document.querySelector("#offer").innerHTML=dis;
+    //     }
+    // }
+
+        
+    </script>
+    </body>
+</html>
