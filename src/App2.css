@@ -1,0 +1,12 @@
+.para{
+    width:50%;
+    height:150px;
+    margin-left: 25%;
+    color: rgb(20, 20, 21);
+    color: azure;
+    text-align: justify;
+    
+}
+.para .des{
+    color:rgb(255, 139, 7);
+}

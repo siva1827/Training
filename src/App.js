@@ -1,17 +1,15 @@
 
 import './App.css';
-import Shapes from './Sample/Shapes';
-function App() {
-  let len=4
-  let bread=4
-  let area=len*bread;
-  return (<>
-    <h1>React Shapes</h1>
-    <Shapes/>
 
-    </>
-    
+function Picture() {
+
+  return (
+    <div class="image">
+   <img src="https://o.remove.bg/downloads/9a0b5c7c-15e3-4970-a0a2-eb487ac9eb87/brand-removebg-preview.png"alt="image1" width="400px" height="300px"></img>
+  </div>
   );
 }
 
-export default App;
+
+export default Picture;
+

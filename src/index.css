@@ -5,12 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  margin-left: 3%;
+  
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73YHBkGMHqk-k_oOF4-Ik4IloR7IFZzuIjQ&usqp=CAU")
+ 
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
 

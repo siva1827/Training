@@ -1,0 +1,26 @@
+
+.image{
+  display: block;
+  text-align: center;
+  border-radius: 20px;
+  
+  width:50%;
+  height:300px;
+  margin-left: 25%;
+}
+.desc a{
+  text-decoration: none;
+}
+.desc{
+  text-align: center;
+}
+button{
+  
+    background-color: #FF5B00;
+    font-size: 14px;
+    height: 40px;
+    width: 160px;
+    border-radius: 30px;
+    
+    text-decoration: none;
+}

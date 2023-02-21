@@ -1,30 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import App from './App';
-import Rectangle from './Rectangle';
-import Circle from'./Circle';
-import Triangle from './Triangle';
-import Square from './Square';
-import Paralleogram from './Parallelogram';
-import Rhombus from './Hexagon';
+import Picture from './App';
+import App2 from './App2';
+import Web from './App3';
+import App4 from './App4';
+import Button from './App5';
 import reportWebVitals from './reportWebVitals';
-import Squareclass from './Squareclass';
-import Rectangle_class from './Rectangle_class';
-import Circlec from './Circlec';
-import Squarec from './Squareclass';
-import Trianglec from './Trianglec';
-import App from './App';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
   <React.StrictMode>
-    <App/>
-    
-    
-    
+    <Picture />
+    <App2/>
+    <App4/>
+    <Web/>
+    <Button/>
   </React.StrictMode>
 );
 
