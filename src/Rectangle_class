@@ -1,0 +1,18 @@
+import React from 'react';
+
+class Rectangle_Class extends React.Component {
+  render() {
+    const length = 10;
+    const width= 3;
+    const area = length * width;
+    return (
+      <div>
+        <p>Length: {length}</p>
+        <p>Width: {width}</p>
+        <p>Area: {area}</p>
+      </div>
+    );
+  }
+}
+
+export default Rectangle_Class;
